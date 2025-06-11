@@ -1,0 +1,82 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files and files not matching ignore patterns, combined into a single document by Repomix.
+
+# File Summary
+
+## Purpose
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+## File Format
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  a. A header with the file path (## File: path/to/file)
+  b. The full contents of the file in a code block
+
+## Usage Guidelines
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+## Notes
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: **/*.{md,mdx,rst,adoc,asciidoc}, **/{docs,doc,documentation}/**/*.txt, **/guide*.txt
+- Files matching these patterns are excluded: **/*.txt, **/node_modules/**, **/.git/**, **/__pycache__/**, **/*.log, **/*.tmp, **/*.bak
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+
+# Directory Structure
+```
+src/
+  pages/
+    markdown-page.md
+README.md
+```
+
+# Files
+
+## File: src/pages/markdown-page.md
+````markdown
+---
+title: 'Markdown + Tailwind'
+layout: ../layouts/main.astro
+---
+
+<div class="grid place-items-center h-screen content-center">
+ <div class="py-2 px-4 bg-purple-500 text-white font-semibold rounded-lg shadow-md">
+  Tailwind classes also work in Markdown!
+ </div>
+ <a
+  href="/"
+  class="p-4 underline hover:text-purple-500 transition-colors ease-in-out duration-200"
+ >
+  Go home
+ </a>
+</div>
+````
+
+## File: README.md
+````markdown
+# Astro with Tailwind
+
+```sh
+pnpm create astro@latest -- --template with-tailwindcss
+```
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+
+Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+
+For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+````
